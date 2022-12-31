@@ -1,5 +1,7 @@
 #!/bin/sh
-YEAR=2015
+SESSION=$(cat session_id)
+
+YEAR=2022
 mkdir $YEAR
 cd $YEAR
 
