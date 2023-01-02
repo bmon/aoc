@@ -1,0 +1,9 @@
+I really don't like implicit returns
+ - more on this, I ran into this a few times where what I thought would be implicit returns inside match statements were not eg 03 l1
+I really don't like macros? Tricky since they seem to be so powerful but god are they hard to cope with from a readability pov
+I like being able to implement Iterator
+I don't really understand why I have to specify the type for my call to generic method parse (01, l1). Compiler should know the type I have and need?
+Error types a bit confusing/arduous, not sure if there are more convenient ways to return generic error types.
+Vec is convenient, iterator is convenient (eg 01 l2 vec sort->slice->iter->sum).
+I miss having loads of convenience methods on stdlib types, although I don't miss the cruft inside stdlibs like STL. Stuff like `array_chunks` is very ergonomic when you want it.
+Enabling nightly features with (macros?) inside source - couldn't it be in the Cargo.toml (03, l2)?
