@@ -7,3 +7,14 @@ Error types a bit confusing/arduous, not sure if there are more convenient ways 
 Vec is convenient, iterator is convenient (eg 01 l2 vec sort->slice->iter->sum).
 I miss having loads of convenience methods on stdlib types, although I don't miss the cruft inside stdlibs like STL. Stuff like `array_chunks` is very ergonomic when you want it.
 Enabling nightly features with (macros?) inside source - couldn't it be in the Cargo.toml (03, l2)?
+Compiler helpful when making honest syntax errors (eg use '<' instead of '(' when defining generic reference)
+Don't really understand mutable references vs just references yet.
+functional is very convenient. Not sure if readability suffers too much when chaining, though...
+I wonder what the convention is for spamming unwrap, frequently writing potential panics seems like it would be an antipattern
+LSP jump to def slow for libs - not sure why
+get vs get_mut has killed me a bit
+ranges are cool and fancy
+lifetimes a little challenging to grasp... (l7 01, self referential struct with references)
+very sad there are no anonymous struts... and no nested structs...
+
+Day 7 was brutal. I tried to take multiple different approaches with `Directory` classes that held references to their subdirs, while still also having a hashmap of all dirs. I hit serious borrow checker hell and ended up giving up and unwinding my solution to a `Directory` that holds basically nothing and just the Hashmap with ownership. I also had serious pain with wanting to hold a `cwd` reference but eventually gave up and ended up looking up `cwd` from the map every time I use it.
